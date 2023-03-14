@@ -9,9 +9,12 @@ const Job = ({ job = {} }) => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
+	// handle Edit
 	const handleEdit = () => {
 		navigate(`/jobs/editjob/${id}`);
 	};
+
+	// Handle delete
 	const handleDelete = () => {
 		dispatch(removeJob(id));
 	};

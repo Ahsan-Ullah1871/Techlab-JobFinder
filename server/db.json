@@ -3,7 +3,7 @@
     {
       "title": "QA Engineer",
       "type": "Full Time",
-      "salary": "15000",
+      "salary": "15007",
       "deadline": "2023-12-31",
       "id": 3
     },
@@ -31,7 +31,7 @@
     {
       "title": "Android App Developer",
       "type": "Internship",
-      "salary": 15000,
+      "salary": "14993",
       "deadline": "2023-03-11",
       "id": 10
     },
@@ -48,6 +48,13 @@
       "salary": 320000,
       "deadline": "2023-03-31",
       "id": 12
+    },
+    {
+      "title": "MERN Stack Developer",
+      "type": "Internship",
+      "salary": "10900",
+      "deadline": "2023-03-30",
+      "id": 13
     }
   ]
 }

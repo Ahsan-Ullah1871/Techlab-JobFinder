@@ -22,9 +22,6 @@ const Jobs = () => {
 
 	//sort by price
 	const sortByPrice = (a, b) => {
-		console.log("====================================");
-		console.log(a, b);
-		console.log("====================================");
 		if (sort === "htl") {
 			return b.salary - a.salary;
 		} else if (sort === "lth") {
@@ -41,7 +38,7 @@ const Jobs = () => {
 			.toUpperCase()
 			.includes(search_text.replace(/\s+/g, "").toUpperCase());
 	};
-	//Search by title
+	//Search by Type
 	const searchByType = (job) => {
 		if (params?.type) {
 			return job.type
@@ -64,8 +61,10 @@ const Jobs = () => {
 
 	//decide what to render ;
 	let content = null;
-	if (isLoading) content = <p>Loading</p>;
-	if (!isLoading && isError) content = <p className="error">{error}</p>;
+	if (isLoading)
+		content = <p className="!text-[#FF8A00] text-center">Loading</p>;
+	if (!isLoading && isError)
+		content = <p className="!text-[#FF5757] text-center">{error}</p>;
 	if (
 		!isLoading &&
 		!isError &&
@@ -91,7 +90,11 @@ const Jobs = () => {
 			?.filter(searchByTitle)
 			?.sort(sortByPrice)?.length == 0
 	) {
-		content = <p className="!text-[#FF5757]">Jobs Not found </p>;
+		content = (
+			<p className="!text-[#FF5757] text-center">
+				Jobs Not found{" "}
+			</p>
+		);
 	}
 
 	return <div className="jobs-list">{content}</div>;

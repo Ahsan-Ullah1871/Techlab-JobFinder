@@ -8,8 +8,6 @@ const AddJobForm = () => {
 	const [formState, setFomState] = useState({});
 	const navigate = useNavigate();
 
-	//
-
 	// handle Update value
 	const handleChange = (key, value) => {
 		setFomState((prev) => ({ ...prev, [key]: value }));
