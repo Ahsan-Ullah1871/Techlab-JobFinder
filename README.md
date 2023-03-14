@@ -1,46 +1,14 @@
-# Getting Started with Create React App and Redux
+এই এসাইনমেন্ট এ যা যা করতে হবেঃ
+✓ JSON সার্ভার থেকে Jobs গুলো Fetch করে নিয়ে এসে লিস্টে দেখাতে হবে। 'Internship', 'Full Time', 'Remote' জব এর জন্যে আলাদা আলাদা কালার কোড দেয়া আছে, সেই কালার কোড অনুযায়ী লিস্টে দেখাতে হবে।
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+✓ সাইডবার থেকে 'Add New Job' এ ক্লিক করলে, React Router Dom ব্যবহার করে, 'Create' পেজে নিয়ে যেতে হবে এবং প্রয়োজনীয় তথ্য দিয়ে Save বাটনে ক্লিক করলে, সেটি Redux Store এ গিয়ে Save হয়ে যাবে।
 
-## Available Scripts
+✓ সাইডবার থেকে 'All Available Jobs' এ ক্লিক করলে, সব গুলো জব দেখাবে, Internship এ ক্লিক করলে শুধুমাত্র 'Internship' এর জব গুলো দেখাবে। একইভাবে 'Full Time' এবং 'Remote' জব এ ক্লিক করলে শুধু মাত্র 'Full Time' এবং 'Remote' জব গুলোই ফিল্টার করে দেখাবে।
 
-In the project directory, you can run:
+✓ এডিট বাটনে ক্লিক করলে, এডিট পেজে নিয়ে যাবে এবং জব এর সব তথ্য গুলো এডিট করার ব্যবস্থা করে দিবে। তথ্য পরিবর্তন করে Edit বাটনে ক্লিক করলে তথ্য পরিবর্তন হয়ে 'All Available' পেজে চলে যাবে।
 
-### `npm start`
+✓ ডিলিট বাটনে ক্লিক করলে, ঐ জবটি ডিলিট হয়ে যাবে।
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+✓ সার্চ ফিচার এড করতে হবে। সেক্ষেত্রে সার্চ করার সময় শুধুমাত্র জব এর টাইটেল দিয়ে জব সার্চ হবে এবং এটি ক্লাইন্ট সাইড এ করতে হবে, সার্ভার সাইডে করার প্রয়োজন নেই।
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+✓ সার্চ এর পাশে ফিল্টার এর ড্রপডাউন আছে, সেখানে ক্লিক করলে Salary অনুযায়ী sorting হবে। অর্থাৎ কখনো বেতন 'কম থেকে বেশি' (ascending), আবার কখনো 'বেশি থেকে কম' (descending) এভাবে sort করে দেখাবে। এটি ক্লাইন্ট সাইড এ করতে হবে, সার্ভার সাইডে করার প্রয়োজন নেই।
