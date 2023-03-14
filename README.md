@@ -1,6 +1,7 @@
+LIVe link : https://assignment-7-by-ahsan.netlify.app/
+
 এই এসাইনমেন্ট এ যা যা করতে হবেঃ
 ✓ JSON সার্ভার থেকে Jobs গুলো Fetch করে নিয়ে এসে লিস্টে দেখাতে হবে। 'Internship', 'Full Time', 'Remote' জব এর জন্যে আলাদা আলাদা কালার কোড দেয়া আছে, সেই কালার কোড অনুযায়ী লিস্টে দেখাতে হবে।
-LIVe link : https://assignment-7-by-ahsan.netlify.app/
 
 ✓ সাইডবার থেকে 'Add New Job' এ ক্লিক করলে, React Router Dom ব্যবহার করে, 'Create' পেজে নিয়ে যেতে হবে এবং প্রয়োজনীয় তথ্য দিয়ে Save বাটনে ক্লিক করলে, সেটি Redux Store এ গিয়ে Save হয়ে যাবে।
 
