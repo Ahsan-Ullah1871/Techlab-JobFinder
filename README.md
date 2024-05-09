@@ -77,3 +77,8 @@ techlab-jobfinder/
 
 ![Home Page](image.png) ![Add New Job](image-1.png)
 
+## Live Demo
+
+Explore the live demo of the project
+[here](https://techlab-job-finder.vercel.app/).
+
