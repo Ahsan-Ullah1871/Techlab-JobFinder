@@ -10,7 +10,7 @@ const Sidebar = () => {
 						<Link
 							to="/jobs"
 							className="main-menu menu-active"
-							id="lws-alljobs-menu"
+							id="techlab-alljobs-menu"
 						>
 							<i className="fa-solid fa-briefcase"></i>
 							<span>All Available Jobs</span>
@@ -20,7 +20,7 @@ const Sidebar = () => {
 								<Link
 									className="sub-menu"
 									to="/jobs/internship"
-									id="lws-internship-menu"
+									id="techlab-internship-menu"
 								>
 									<i className="fa-solid fa-stop !text-[#FF5757]"></i>
 									Internship
@@ -30,7 +30,7 @@ const Sidebar = () => {
 								<Link
 									className="sub-menu"
 									to="/jobs/fulltime"
-									id="lws-fulltime-menu"
+									id="techlab-fulltime-menu"
 								>
 									<i className="fa-solid fa-stop !text-[#FF8A00]"></i>
 									Full Time
@@ -40,7 +40,7 @@ const Sidebar = () => {
 								<Link
 									className="sub-menu"
 									to="/jobs/remote"
-									id="lws-remote-menu"
+									id="techlab-remote-menu"
 								>
 									<i className="fa-solid fa-stop !text-[#56E5C4]"></i>
 									Remote
@@ -52,7 +52,7 @@ const Sidebar = () => {
 						<Link
 							to="/jobs/addjob"
 							className="main-menu"
-							id="lws-addJob-menu"
+							id="techlab-addJob-menu"
 						>
 							<i className="fa-solid fa-file-circle-plus"></i>
 							<span>Add NewJob</span>

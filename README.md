@@ -1,17 +1,79 @@
-LIVe link : https://assignment-7-by-ahsan.netlify.app/
+# Techlab JobFinder
 
-এই এসাইনমেন্ট এ যা যা করতে হবেঃ
-✓ JSON সার্ভার থেকে Jobs গুলো Fetch করে নিয়ে এসে লিস্টে দেখাতে হবে। 'Internship', 'Full Time', 'Remote' জব এর জন্যে আলাদা আলাদা কালার কোড দেয়া আছে, সেই কালার কোড অনুযায়ী লিস্টে দেখাতে হবে।
+Techlab JobFinder is a web application designed to streamline job management
+tasks such as viewing, adding, editing, and deleting job listings. It provides
+features to filter jobs by type, search for specific jobs, and sort jobs by
+salary. This README provides an overview of the project structure, technologies
+used, API endpoints, and screenshots.
 
-✓ সাইডবার থেকে 'Add New Job' এ ক্লিক করলে, React Router Dom ব্যবহার করে, 'Create' পেজে নিয়ে যেতে হবে এবং প্রয়োজনীয় তথ্য দিয়ে Save বাটনে ক্লিক করলে, সেটি Redux Store এ গিয়ে Save হয়ে যাবে।
+## Features
 
-✓ সাইডবার থেকে 'All Available Jobs' এ ক্লিক করলে, সব গুলো জব দেখাবে, Internship এ ক্লিক করলে শুধুমাত্র 'Internship' এর জব গুলো দেখাবে। একইভাবে 'Full Time' এবং 'Remote' জব এ ক্লিক করলে শুধু মাত্র 'Full Time' এবং 'Remote' জব গুলোই ফিল্টার করে দেখাবে।
+- **Job Management:** Fetch jobs from a backend server and display them in a
+  list with different colors based on job types (Internship, Full Time, Remote).
+- **Add New Jobs:** Use a form page with React Router Dom and Redux to add new
+  jobs, saving data to the backend server.
+- **Filter and Sort:** View all available jobs or filter jobs by types such as
+  Internship, Full Time, and Remote. Sort jobs by salary in ascending or
+  descending order.
+- **Edit and Delete:** Edit job details or delete jobs directly from the UI,
+  reflecting changes in the backend server.
 
-✓ এডিট বাটনে ক্লিক করলে, এডিট পেজে নিয়ে যাবে এবং জব এর সব তথ্য গুলো এডিট করার ব্যবস্থা করে দিবে। তথ্য পরিবর্তন করে Edit বাটনে ক্লিক করলে তথ্য পরিবর্তন হয়ে 'All Available' পেজে চলে যাবে।
+## Technologies Used
 
-✓ ডিলিট বাটনে ক্লিক করলে, ঐ জবটি ডিলিট হয়ে যাবে।
+- **Frontend:** React.js, Redux Toolkit, React Router Dom, HTML5, CSS3,
+  JavaScript (ES6+)
+- **Backend:** Node.js, Express.js, PostgreSQL (Backend Database), Prisma (ORM
+  for PostgreSQL)
+- **API Testing:** Postman (for API endpoint testing)
 
-✓ সার্চ ফিচার এড করতে হবে। সেক্ষেত্রে সার্চ করার সময় শুধুমাত্র জব এর টাইটেল দিয়ে জব সার্চ হবে এবং এটি ক্লাইন্ট সাইড এ করতে হবে, সার্ভার সাইডে করার প্রয়োজন নেই।
+## Project Structure
 
-✓ সার্চ এর পাশে ফিল্টার এর ড্রপডাউন আছে, সেখানে ক্লিক করলে Salary অনুযায়ী sorting হবে। অর্থাৎ কখনো বেতন 'কম থেকে বেশি' (ascending), আবার কখনো 'বেশি থেকে কম' (descending) এভাবে sort করে দেখাবে। এটি ক্লাইন্ট সাইড এ করতে হবে, সার্ভার সাইডে করার প্রয়োজন নেই।
+```
+techlab-jobfinder/
+│
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Header.js
+│   │   ├── Root.js
+│   │   └── ...
+│   ├── pages/
+│   │   ├── HomePage.js
+│   │   ├── AddJob.js
+│   │   ├── EditJob.js
+│   │   └── ...
+│   ├── features/jobs
+│   │   ├── jobsApi.js
+│   │   ├── jobsSLice.js
+│   │   └── ...
+│   ├── app/
+│   │   ├── store.js
+│   │   └── ...
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+│
+├── package.json
+├── README.md
+└── ...
+
+```
+
+- **`src/components/`:** Contains React components like JobList, JobForm, etc.
+- **`src/pages/`:** Contains React components representing different pages like
+  Home, CreateJob, EditJob, etc.
+- **`src/store/`:** Includes Redux actions, reducers, and store configuration.
+- **`src/services/`:** Contains service files for interacting with the backend
+  API.
+
+## API Endpoints
+
+- **GET `/api/jobs`:** Fetch all jobs.
+- **POST `/api/jobs`:** Add a new job.
+- **PATCH `/api/jobs/:id`:** Update a job by ID.
+- **DELETE `/api/jobs/:id`:** Delete a job by ID.
+
+## Screenshots
+
+![Home Page](image.png) ![Add New Job](image-1.png)
 

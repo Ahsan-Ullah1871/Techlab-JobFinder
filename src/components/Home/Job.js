@@ -20,11 +20,11 @@ const Job = ({ job = {} }) => {
 	};
 
 	return (
-		<div className="lws-single-job">
+		<div className="techlab-single-job">
 			<div className="flex-1 min-w-0">
-				<h2 className="lws-title">{title}</h2>
+				<h2 className="techlab-title">{title}</h2>
 				<div className="job-footers">
-					<div className="lws-type">
+					<div className="techlab-type">
 						{/* <!-- Fulltime - #FF8A00,  --><!-- Internship - #FF5757,  --><!-- Remote - #56E5C4,  --> */}
 						<i
 							className={`fa-solid fa-stop text-lg mr-1.5 ${
@@ -41,11 +41,11 @@ const Job = ({ job = {} }) => {
 						></i>
 						{type}
 					</div>
-					<div className="lws-salary">
+					<div className="techlab-salary">
 						<i className="fa-solid fa-bangladeshi-taka-sign text-slate-400 text-lg mr-1.5"></i>
 						{salary}
 					</div>
-					<div className="lws-deadline">
+					<div className="techlab-deadline">
 						<i className="fa-regular fa-calendar text-slate-400 text-lg mr-1.5"></i>
 						Closing on {deadline}
 					</div>
@@ -55,7 +55,7 @@ const Job = ({ job = {} }) => {
 				<span className="hidden sm:block">
 					<button
 						type="button"
-						className="lws-edit btn btn-primary"
+						className="techlab-edit btn btn-primary"
 						onClick={handleEdit}
 					>
 						<i className="fa-solid fa-pen text-gray-300 -ml-1 mr-2"></i>
@@ -66,7 +66,7 @@ const Job = ({ job = {} }) => {
 				<span className="sm:ml-3">
 					<button
 						type="button"
-						className="lws-delete btn btn-danger "
+						className="techlab-delete btn btn-danger "
 						onClick={handleDelete}
 					>
 						<i className="fa-solid fa-trash text-gray-300 -ml-1 mr-2"></i>

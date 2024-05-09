@@ -84,14 +84,14 @@ const EditJobForm = () => {
 			>
 				<div className="fieldContainer">
 					<label
-						for="lws-JobTitle"
+						for="techlab-JobTitle"
 						className="text-sm font-medium text-slate-300"
 					>
 						Job Title
 					</label>
 					<select
-						id="lws-JobTitle"
-						name="lwsJobTitle"
+						id="techlab-JobTitle"
+						name="techlabJobTitle"
 						required
 						onChange={(e) =>
 							handleChange(
@@ -101,7 +101,11 @@ const EditJobForm = () => {
 						}
 						value={formState?.title}
 					>
-						<option value="" hidden selected>
+						<option
+							value=""
+							hidden
+							selected
+						>
 							Select Job
 						</option>
 						<option
@@ -212,10 +216,10 @@ const EditJobForm = () => {
 				</div>
 
 				<div className="fieldContainer">
-					<label for="lws-JobType">Job Type</label>
+					<label for="techlab-JobType">Job Type</label>
 					<select
-						id="lws-JobType"
-						name="lwsJobType"
+						id="techlab-JobType"
+						name="techlabJobType"
 						required
 						onChange={(e) =>
 							handleChange(
@@ -224,13 +228,17 @@ const EditJobForm = () => {
 							)
 						}
 					>
-						<option value="" hidden selected>
+						<option
+							value=""
+							hidden
+							selected
+						>
 							Select Job Type
 						</option>
 						<option
 							selected={
 								formState?.type ===
-								"Full Time"
+								"FullTime"
 							}
 						>
 							Full Time
@@ -255,13 +263,13 @@ const EditJobForm = () => {
 				</div>
 
 				<div className="fieldContainer">
-					<label for="lws-JobSalary">Salary</label>
+					<label for="techlab-JobSalary">Salary</label>
 					<div className="flex border rounded-md shadow-sm border-slate-600">
 						<span className="input-tag">BDT</span>
 						<input
 							type="number"
-							name="lwsJobSalary"
-							id="lws-JobSalary"
+							name="techlabJobSalary"
+							id="techlab-JobSalary"
 							required
 							className="!rounded-l-none !border-0"
 							placeholder="20,00,000"
@@ -277,13 +285,26 @@ const EditJobForm = () => {
 				</div>
 
 				<div className="fieldContainer">
-					<label for="lws-JobDeadline">Deadline</label>
+					<label for="techlab-JobDeadline">
+						Deadline
+					</label>
 					<input
 						type="date"
-						name="lwsJobDeadline"
-						id="lws-JobDeadline"
+						name="techlabJobDeadline"
+						id="techlab-JobDeadline"
 						required
-						value={formState?.deadline}
+						value={
+							formState?.deadline
+								? new Date(
+										formState?.deadline
+								  )
+										.toISOString()
+										.slice(
+											0,
+											10
+										)
+								: ""
+						}
 						onChange={(e) =>
 							handleChange(
 								"deadline",
@@ -296,7 +317,7 @@ const EditJobForm = () => {
 				<div className="text-right">
 					<button
 						type="submit"
-						id="lws-submit"
+						id="techlab-submit"
 						className="cursor-pointer btn btn-primary w-fit"
 						disabled={
 							!formState?.id
